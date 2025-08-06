@@ -1,3 +1,4 @@
 Name : V.Vimala
 Course : BSc-Data Science
-One thing I learned about GitHub : I Learned how to upload my projects and files in GitHub.
+
+One thing I learned at GitHub : I Learned how to upload my projects and files in GitHub.
