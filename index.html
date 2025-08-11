@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>College Fest 2025 - Home</title>
+  <style>
+    body { font-family: Arial; margin: 0; }
+    header, nav, footer { background: #4a148c; color: white; text-align: center; padding: 15px; }
+    nav a { color: white; margin: 0 10px; text-decoration: none; font-weight: bold; }
+    section { padding: 40px 20px; }
+    .countdown { font-size: 20px; color: #e91e63; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Welcome to Vibrance 2025</h1>
+  <p>The Grand College Fest Awaits You!</p>
+  <div class="countdown" id="countdown"></div>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="events.html">Events</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="register.html">Register</a>
+</nav>
+
+<section>
+  <h2>About the Fest</h2>
+  <p>Vibrance 2025 is a two-day cultural & technical extravaganza hosted by our college. Come experience music, drama, innovation, and celebration!</p>
+</section>
+
+<footer>
+  <p>&copy; 2025 College Fest</p>
+</footer>
+
+<script>
+  const countdown = document.getElementById("countdown");
+  const festDate = new Date("2025-12-15T00:00:00").getTime();
+  setInterval(() => {
+    const now = new Date().getTime();
+    const diff = festDate - now;
+    const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const s = Math.floor((diff % (1000 * 60)) / 1000);
+    countdown.innerHTML = diff < 0 ? "🎉 The fest has begun!" : `⏳ Starts in: ${d}d ${h}h ${m}m ${s}s`;
+  }, 1000);
+</script>
+
+</body>
+</html>
